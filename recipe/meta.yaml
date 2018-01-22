@@ -10,8 +10,8 @@ package:
 source:
   fn: BH_{{ version }}.tar.gz
   url:
-    - https://cran.r-project.org/src/contrib/BH_{{ version }}.tar.gz
-    - https://cran.r-project.org/src/contrib/Archive/BH/BH_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/BH_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/Archive/BH/BH_{{ version }}.tar.gz
   sha256: 82baa78afe8f1edc3c7e84e1c9924321047e14c1e990df9b848407baf3f7cb58
 
 
