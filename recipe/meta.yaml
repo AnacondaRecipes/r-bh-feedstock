@@ -1,4 +1,4 @@
-{% set version = '1.66.0-1' %}
+{% set version = '1.69.0-1' %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -11,12 +11,13 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/BH_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/BH/BH_{{ version }}.tar.gz
-  sha256: 17d9eb5512d74aa7dd02ec98953408422e728b01ce63493a6a473070b9596a92
+  sha256: a0fd4364b7e368f09c56dec030823f52c16da0787580af7e4615eddeb99baca2
 
 build:
   merge_build_host: True  # [win]
   # If this is a new build for the same version, increment the build number.
   number: 0
+  noarch: generic
 
   # This is required to make R link correctly on Linux.
   rpaths:
@@ -53,10 +54,10 @@ about:
     without linking.  This  package aims to provide the most useful subset of Boost
     libraries  for template use among CRAN package. By placing these libraries in  this
     package, we offer a more efficient distribution system for CRAN  as replication
-    of this code in the sources of other packages is  avoided. As of release 1.65.0-1,
+    of this code in the sources of other packages is  avoided. As of release 1.69.0-1,
     the following Boost libraries are included: ''algorithm'' ''align'' ''any'' ''atomic''
     ''bimap'' ''bind'' ''circular_buffer'' ''compute'' ''concept'' ''config'' ''container''
-    ''date''_''time'' ''detail'' ''dynamic_bitset'' ''exception'' ''filesystem'' ''flyweight''
+    ''date_time'' ''detail'' ''dynamic_bitset'' ''exception'' ''filesystem'' ''flyweight''
     ''foreach'' ''functional'' ''fusion'' ''geometry'' ''graph'' ''heap'' ''icl'' ''integer''
     ''interprocess'' ''intrusive'' ''io'' ''iostreams'' ''iterator'' ''math'' ''move''
     ''mpl'' ''multiprcecision'' ''numeric'' ''pending'' ''phoenix'' ''preprocessor''
@@ -76,17 +77,17 @@ extra:
 # Package: BH
 # Type: Package
 # Title: Boost C++ Header Files
-# Version: 1.66.0-1
-# Date: 2018-02-12
+# Version: 1.69.0-1
+# Date: 2019-01-07
 # Author: Dirk Eddelbuettel, John W. Emerson and Michael J. Kane
 # Maintainer: Dirk Eddelbuettel <edd@debian.org>
-# Description: Boost provides free peer-reviewed portable C++ source  libraries.  A large part of Boost is provided as C++ template code which is resolved entirely at compile-time without linking.  This  package aims to provide the most useful subset of Boost libraries  for template use among CRAN package. By placing these libraries in  this package, we offer a more efficient distribution system for CRAN  as replication of this code in the sources of other packages is  avoided. As of release 1.65.0-1, the following Boost libraries are included: 'algorithm' 'align' 'any' 'atomic' 'bimap' 'bind' 'circular_buffer' 'compute' 'concept' 'config' 'container' 'date'_'time' 'detail' 'dynamic_bitset' 'exception' 'filesystem' 'flyweight' 'foreach' 'functional' 'fusion' 'geometry' 'graph' 'heap' 'icl' 'integer' 'interprocess' 'intrusive' 'io' 'iostreams' 'iterator' 'math' 'move' 'mpl' 'multiprcecision' 'numeric' 'pending' 'phoenix' 'preprocessor' 'propery_tree' 'random' 'range' 'scope_exit' 'smart_ptr' 'sort' 'spirit' 'tuple' 'type_traits' 'typeof' 'unordered' 'utility' 'uuid'.
+# Description: Boost provides free peer-reviewed portable C++ source  libraries.  A large part of Boost is provided as C++ template code which is resolved entirely at compile-time without linking.  This  package aims to provide the most useful subset of Boost libraries  for template use among CRAN package. By placing these libraries in  this package, we offer a more efficient distribution system for CRAN  as replication of this code in the sources of other packages is  avoided. As of release 1.69.0-1, the following Boost libraries are included: 'algorithm' 'align' 'any' 'atomic' 'bimap' 'bind' 'circular_buffer' 'compute' 'concept' 'config' 'container' 'date_time' 'detail' 'dynamic_bitset' 'exception' 'filesystem' 'flyweight' 'foreach' 'functional' 'fusion' 'geometry' 'graph' 'heap' 'icl' 'integer' 'interprocess' 'intrusive' 'io' 'iostreams' 'iterator' 'math' 'move' 'mpl' 'multiprcecision' 'numeric' 'pending' 'phoenix' 'preprocessor' 'propery_tree' 'random' 'range' 'scope_exit' 'smart_ptr' 'sort' 'spirit' 'tuple' 'type_traits' 'typeof' 'unordered' 'utility' 'uuid'.
 # License: BSL-1.0
 # BugReports: https://github.com/eddelbuettel/bh/issues
 # NeedsCompilation: no
-# Packaged: 2018-02-12 19:11:19.852233 UTC; deddelbuettel
+# Packaged: 2019-01-07 12:00:43.681885 UTC; edd
 # Repository: CRAN
-# Date/Publication: 2018-02-13 23:48:11 UTC
+# Date/Publication: 2019-01-07 19:50:25 UTC
 
 # See
 # http://docs.continuum.io/conda/build.html for
